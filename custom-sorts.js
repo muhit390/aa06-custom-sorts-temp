@@ -1,12 +1,10 @@
 function ageSort(users) {
     // Your code here
-    let newArr = [];
     users.sort((a, b) => a.age - b.age);
 
-    for (let i = 0; i < users.length; i++) {
-        newArr.push(users[i].firstName)
-    }
-    return newArr;
+    let sortedFirstNames = users.map(user => user.firstName);
+
+    return sortedFirstNames;
 
 }
 
@@ -14,7 +12,6 @@ function oddEvenSort(arr) {
     // Your code here
     let odd = [];
     let even = [];
-    let newArr = [];
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] % 2 == 0) {
             even.push(arr[i]);
@@ -22,11 +19,11 @@ function oddEvenSort(arr) {
             odd.push(arr[i])
         }
     }
-    odd.sort();
-    even.sort();
-    newArr = [...odd, ...even];
+    odd.sort((a, b) => a - b);
+    even.sort((a, b) => a - b);
 
-    return newArr;
+
+    return [...odd, ...even];
 
 }
 
