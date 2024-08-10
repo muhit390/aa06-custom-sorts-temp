@@ -48,6 +48,17 @@ function validAnagrams(s, t) {
 
 function reverseBaseSort(arr) {
 
+    return arr.sort((a, b) => {
+        let lenA = a.toString().length;
+        let lenB = b.toString().length;
+
+        if (lenA === lenB) {
+            return a - b; // ascending order within the same base length
+        }
+
+        return lenB - lenA; // descending order of base lengths
+    });
+
 }
 
 function frequencySort(arr) {
