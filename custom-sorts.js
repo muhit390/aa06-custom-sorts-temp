@@ -70,7 +70,6 @@ function frequencySort(arr) {
         frequency[num] = (frequency[num] || 0) + 1;
     }
 
-    // Sort the array based on frequency and then by value
     return arr.sort((a, b) => {
         if (frequency[a] === frequency[b]) {
             return b - a; // decreasing order if frequencies are the same
