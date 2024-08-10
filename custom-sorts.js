@@ -65,7 +65,7 @@ function frequencySort(arr) {
     // Your code here
     let frequency = {};
 
-    // Count the frequency of each element
+
     for (let num of arr) {
         frequency[num] = (frequency[num] || 0) + 1;
     }
